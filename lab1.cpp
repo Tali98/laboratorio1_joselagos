@@ -113,6 +113,7 @@ int main(){
 						}
 					}
 				}
+				cout<<"la respuesta la formula de el numero: "<<num_n<<" es = "<< resp<<endl;
 			break;
 		}
 		cout<<"Ingrese una nueva opcion"<<endl;
