@@ -61,7 +61,7 @@ int main(){
 				double respuesta;
 				respuesta = (cateto2*cateto2) - (hipotenusa*hipotenusa) - (cateto * cateto);
 				respuesta = respuesta/-(2*hipotenusa*cateto);
-				respuesta = asin(respuesta) * 180 / PI;
+				respuesta = acos(respuesta) * 180 / PI;
 				cout<<respuesta<<endl;
 				anguloAlfa = respuesta;
 				cout<<"Angulo Alfa es igual a = "<< anguloAlfa<<endl;
@@ -76,8 +76,12 @@ int main(){
                                 anguloY = respuesta;
                                 cout<<"Angulo Y rara  es igual a = "<< anguloY<<endl;
 				respuesta = anguloAlfa + anguloBeta + anguloY;
-				if(respuesta == 180){
-					if(anguloBeta == 90){
+				int respuesta2;
+				respuesta2 = (int) respuesta;
+				int angulorect;
+				angulorect= (int) anguloBeta;
+				if(respuesta2 == 180){
+					if(angulorect == 90){
 						cout<<"Si es angulo recto"<<endl;
 					}else{
 						cout<<"No es angulo recto"<<endl;
@@ -120,8 +124,11 @@ int main(){
 		cout<<"1.Ejercicio 1 : Cubos e Impares"<<endl;
        		 cout<<"2.Ejercicio 2 : Triangulo"<<endl;
        		 cout<<"3.Ejercicio 3 : Divisores Impares"<<endl;
+		 cout<<"Cualquier otro numero ingresado se tomara como que quiere salir"<<endl;
        		 cout<<"Ingrese su opcion "<<endl;
+
 
 		cin>>menu;
 	}
+	cout<<"Gracias por usar el Programa!!"<<endl;
 }
