@@ -93,6 +93,11 @@ int main(){
 			break;
 		}
 		cout<<"Ingrese una nueva opcion"<<endl;
+		cout<<"1.Ejercicio 1 : Cubos e Impares"<<endl;
+       		 cout<<"2.Ejercicio 2 : Triangulo"<<endl;
+       		 cout<<"3.Ejercicio 3 : Divisores Impares"<<endl;
+       		 cout<<"Ingrese su opcion "<<endl;
+
 		cin>>menu;
 	}
 }
