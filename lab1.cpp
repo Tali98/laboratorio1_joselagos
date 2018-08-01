@@ -55,10 +55,10 @@ int main(){
 				cout<<"Ingrese cateto 2 o el opuesto a la hipotenusa"<<endl;
 				double cateto2;
 				cin>>cateto2;
-				double anguloAlfa = 0;
-				double anguloBeta = 0;
-				double anguloY    = 0;
-				double respuesta = 0;
+				double anguloAlfa;
+				double anguloBeta;
+				double anguloY;
+				double respuesta;
 				respuesta = (cateto2*cateto2) - (hipotenusa*hipotenusa) - (cateto * cateto);
 				respuesta = respuesta/-(2*hipotenusa*cateto);
 				respuesta = asin(respuesta) * 180 / PI;
@@ -85,11 +85,34 @@ int main(){
 				}else{
 					cout<<"Ese no es un triangulo"<<endl;
 				}
-				double s = cateto2 + hipotenusa + cateto;
+				double s;
+				s= cateto2 + hipotenusa + cateto;
 				s = s/2;
-				double area = s*(s-cateto2)*(s-hipotenusa)*(s-cateto);
+				double area;
+			        area = s*(s-cateto2)*(s-hipotenusa)*(s-cateto);
 				area = sqrt(area);
 				cout<<"El area del triangulo o no triangulo es: "<<area<<endl;	
+			break;
+			case 3:
+				cout<<"Ingrese el numero"<<endl;
+				int num_n;
+				int resp = 0;
+				int impar = 0;
+				cin>>num_n;
+				for(int a = 1 ; a <= num_n ; a++){
+					int cont=0;
+					if(num_n%a==0){
+						impar = (num_n+a)/a;
+						for(int b = 1 ; b <= impar ; b++){
+							if (impar%b==0){
+								cont++;
+							}
+						}
+						if(cont<=2){
+							resp = resp + impar;
+						}
+					}
+				}
 			break;
 		}
 		cout<<"Ingrese una nueva opcion"<<endl;
